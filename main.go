@@ -63,7 +63,7 @@ func initFlags() {
 	appFlags.InitializeDB = flag.Bool("initialize_db", false, "initialize the database and create all tables")
 	appFlags.ShowHelpMessage = flag.Bool("help", false, "show help")
 	appFlags.ShowVersion = flag.Bool("version", false, "show version")
-	appFlags.ConfigPath = flag.String("config-path", "/usr/local/promcasa/etc", "the path to the promcasaapp config file")
+	appFlags.ConfigPath = flag.String("config-path", "/usr/local/promcasa/etc", "the path to the promcasaapp config directory")
 	appFlags.LogName = flag.String("log-name", "", "the name prefix of the log file.")
 	appFlags.LogPath = flag.String("log-path", "", "the path for the log file.")
 
