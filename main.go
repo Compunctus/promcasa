@@ -345,7 +345,7 @@ func getDataDBSession() ([]*sqlx.DB, []model.DataDatabasesMap) {
 			dbObject.Proto, dbObject.Host, dbObject.User, dbObject.Name, dbObject.Node,
 			dbObject.Port, dbObject.ReadTimeout, dbObject.DialTimeout))
 
-		connectString := fmt.Sprintf("%s://%s:%d?username=%s&password=%s&database=%s&read_timeout=%s&dial_timeout=%s&compress=true&debug=%t",
+		connectString := fmt.Sprintf("%s://%s:%d/%s?username=%s&password=%s&read_timeout=%s&dial_timeout=%s&compress=true&debug=%t",
 			dbObject.Proto, dbObject.Host, dbObject.Port, dbObject.User, dbObject.Password, dbObject.Name,
 			dbObject.ReadTimeout, dbObject.DialTimeout, dbObject.Debug)
 
