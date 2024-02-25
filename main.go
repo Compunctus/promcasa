@@ -346,7 +346,7 @@ func getDataDBSession() ([]*sqlx.DB, []model.DataDatabasesMap) {
 			dbObject.Port, dbObject.ReadTimeout, dbObject.DialTimeout))
 
 		connectString := fmt.Sprintf("%s://%s:%d/%s?username=%s&password=%s&read_timeout=%s&dial_timeout=%s&compress=true&debug=%t",
-			dbObject.Proto, dbObject.Host, dbObject.Port, dbObject.User, dbObject.Password, dbObject.Name,
+			dbObject.Proto, dbObject.Host, dbObject.Port, dbObject.Name, dbObject.User, dbObject.Password,
 			dbObject.ReadTimeout, dbObject.DialTimeout, dbObject.Debug)
 
 		db, err := sqlx.Open("clickhouse", connectString)
